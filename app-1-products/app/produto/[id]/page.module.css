@@ -1,0 +1,91 @@
+/* app/produto/[id]/page.module.css */
+
+/* 1. Contêiner principal para centralizar o card */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh; /* Opcional: Garante que o contêiner ocupe a altura mínima da tela */
+  background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+/* 2. Estilo e largura do card do produto */
+.productCard {
+  width: 100%;
+  max-width: 1000px; /* Largura máxima para centralizar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* 3. Título e Descrição (pode ser ajustado) */
+.cardTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* 4. Contêiner para Layout de Duas Colunas (Imagem e Detalhes) */
+.contentWrapper {
+  display: flex;
+  flex-direction: column; /* Padrão: Imagem acima dos detalhes (Mobile) */
+  gap: 2rem; /* Espaçamento entre as seções */
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Breakpoint para telas maiores (Desktop) */
+@media (min-width: 768px) {
+  .contentWrapper {
+    flex-direction: row; /* Desktop: Imagem ao lado dos detalhes */
+  }
+}
+
+/* 5. Seção da Imagem */
+.imageSection {
+  position: relative;
+  width: 100%;
+  min-height: 300px; /* Altura mínima para a imagem */
+  flex: 1 1 40%; /* Ocupa 40% em desktop */
+  display: flex; /* Para centralizar a imagem dentro do contêiner */
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* Fundo branco para a imagem */
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* 6. Seção de Detalhes */
+.detailsSection {
+  flex: 1 1 60%; /* Ocupa 60% em desktop */
+  padding-top: 0; /* Remove padding extra do CardContent */
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d9534f; /* Preço em destaque */
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  font-size: 1.1rem;
+  color: #f0ad4e; /* Cor para a avaliação */
+  margin-bottom: 1.5rem;
+}
+
+/* 7. Estilo da Lista de Informações (opcional, dependendo da sua biblioteca) */
+.infoList > div {
+  /* Estilo para o componente Item */
+  border-bottom: 1px solid #eee;
+  padding: 0.8rem 0;
+}
+.infoList > div:last-child {
+  border-bottom: none;
+}
