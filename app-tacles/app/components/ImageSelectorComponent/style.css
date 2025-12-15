@@ -1,0 +1,57 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #5865f2;
+}
+
+.label-image-upload {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #5865f2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid #2c2f33;
+}
+
+.label-image-upload:hover {
+  transform: scale(1.1);
+  background: #4752c4;
+}
+
+.label-image-upload svg {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .profile-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}

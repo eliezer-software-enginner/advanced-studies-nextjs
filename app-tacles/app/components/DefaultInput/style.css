@@ -1,0 +1,20 @@
+.default-input-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.default-input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b9bbbe;
+}
+
+.posts-text-area {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}

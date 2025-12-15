@@ -1,0 +1,36 @@
+.categories-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.category-item {
+  background-color: #fff;
+  color: black;
+  padding: 8px 5px;
+  border-radius: 12px;
+  border: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-item:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.category-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

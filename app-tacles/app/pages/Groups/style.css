@@ -1,0 +1,31 @@
+.groups-page {
+  padding: 20px;
+}
+
+.groups-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.groups-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.create-button {
+  background-color: #5865f2;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #4752c4;
+}

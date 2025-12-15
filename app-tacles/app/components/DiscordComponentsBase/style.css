@@ -1,0 +1,218 @@
+/* Container padrão do DiscordMessage */
+
+.discord-base-container {
+  display: flex;
+  min-width: 300px;
+  max-width: 600px;
+  gap: 10px;
+  border: 1px solid rgba(218, 226, 225, 0.089);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.discord-base-bot-image-container {
+  height: 38px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #5865f2;
+  padding: 4px;
+  margin-top: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.discord-base-bot-image {
+  object-fit: cover;
+  height: 22px;
+  width: 22px;
+}
+
+.discord-base-column-content {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #dcddde;
+  padding: 16px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.discord-row {
+  display: flex;
+  justify-content: space-between;
+  background: #2f3136;
+  border-radius: 10px;
+  border-left: 4px solid var(--embed-color, #0099ff);
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  padding: 10px;
+}
+
+/* O “embed card” customizado */
+.custom-embed {
+  display: flex;
+  /* padding: 12px; */
+  overflow: hidden;
+  /* background-color: red; */
+}
+
+/* Para forçar a cor do embed */
+.custom-embed[data-color="BLUE"] {
+  --embed-color: #0099ff;
+}
+.custom-embed[data-color="GREEN"] {
+  --embed-color: #57f287;
+}
+.custom-embed[data-color="ORANGE"] {
+  --embed-color: #faa61a;
+}
+.custom-embed[data-color="RED"] {
+  --embed-color: #ed4245;
+}
+
+/* Conteúdo interno do embed */
+.embed-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.top-row {
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between; /* empurra texto à esquerda e imagem à direita */
+  align-items: flex-start; /* alinha pelo topo */
+}
+
+.top-row .title-and-description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.embed-image-wrapper {
+  position: relative;
+  flex: 0 0 auto; /* não cresce nem encolhe */
+  flex: 0 0 auto; /* mantém largura fixa (auto) */
+  margin-left: auto; /* empurra o wrapper totalmente para a direita */
+}
+
+.embed-image-at-right {
+  height: 70px;
+  width: 70px;
+  border-radius: 7px;
+  /* impede que a imagem seja encolhida ou esticada */
+  flex-shrink: 0;
+}
+
+.rest-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.embed-title,
+.embed-description,
+.embed-footer,
+.embed-fields,
+.embed-fields * {
+  font-size: 0.7rem;
+  /* mantém as quebras de linha normais */
+  white-space: pre-wrap !important;
+
+  /* força o navegador a quebrar linhas mesmo em palavras muito longas */
+
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Título */
+.embed-title {
+  font-weight: 600;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+/* Container of description */
+.description-container {
+  display: flex;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.remove-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #ed4245;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-button:hover {
+  background-color: #d33639;
+  transform: scale(1.05);
+}
+
+/* Imagem */
+.embed-image {
+  width: 100%;
+  max-height: 300px; /* ou outro valor adequado */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+}
+
+/* 2) Estilizar texto marcado (Markdown) */
+.embed-description strong,
+.embed-description b {
+  font-weight: 600;
+}
+.embed-description em,
+.embed-description i {
+  font-style: italic;
+}
+
+.embed-description a {
+  color: #0099ff;
+  font-size: 0.8rem;
+}
+
+/* Campos extras (subdescription) */
+.embed-fields {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.embed-field {
+  flex: 1;
+  border-radius: 4px;
+}
+
+.embed-field-title {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Footer */
+.embed-footer {
+  font-size: 12px;
+  color: #ebe6e6;
+}
+
+.footer-branding {
+  color: #ffffffd2;
+}

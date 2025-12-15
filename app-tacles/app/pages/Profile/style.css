@@ -1,0 +1,173 @@
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-header {
+  margin-bottom: 40px;
+}
+
+.profile-header h1 {
+  color: #fff;
+  font-size: 28px;
+  margin: 0;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: linear-gradient(45deg, #2c2f33, #23272a);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #5865f2;
+}
+
+.profile-image-upload {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #5865f2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid #2c2f33;
+}
+
+.profile-image-upload:hover {
+  transform: scale(1.1);
+  background: #4752c4;
+}
+
+.profile-image-upload svg {
+  color: #fff;
+  font-size: 18px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-name h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+}
+
+.premium-badge {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  color: #2c2f33;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.premium-badge svg {
+  font-size: 16px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  gap: 12px;
+}
+
+.detail-label {
+  color: #b9bbbe;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #fff;
+}
+
+.detail-value.premium {
+  color: #ffd700;
+}
+
+.detail-value.free {
+  color: #b9bbbe;
+}
+
+.upgrade-button {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #2c2f33;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  margin-top: 16px;
+}
+
+.upgrade-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+}
+
+.upgrade-button svg {
+  font-size: 18px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .profile-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .profile-info {
+    flex: 1;
+  }
+
+  .profile-image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,52 @@
+.discord-card-container {
+  display: grid;
+  gap: 32px;
+  padding: 24px;
+  background-color: #36393f;
+  color: #dcddde;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  /* Mobile: uma coluna, áreas empilhadas */
+  grid-template-areas:
+    "preview-top"
+    "form"
+    "preview-bottom";
+}
+
+/* Associações de área */
+.preview-top {
+  grid-area: preview-top;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.discord-form {
+  grid-area: form;
+}
+.preview-bottom {
+  grid-area: preview-bottom;
+}
+
+/* Desktop (>=1024px): duas colunas */
+/* Coluna 1: form ocupa 1fr, Coluna 2: preview-top + preview-bottom ocupam 2fr */
+@media (min-width: 1024px) {
+  .discord-card-container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "form preview-top"
+      "form preview-bottom";
+    align-items: start;
+  }
+
+  /* Ajustes de layout interno das áreas */
+  .preview-top {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .preview-bottom {
+    /* margin-top: -240px; */
+  }
+}
